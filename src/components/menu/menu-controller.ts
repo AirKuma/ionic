@@ -1,7 +1,7 @@
 import { Menu } from './menu';
 import { MenuType } from './menu-types';
 import { Platform } from '../../platform/platform';
-import { removeArrayItem } from '../../util/util';
+import { removeArrayItem, assert } from '../../util/util';
 
 
 /**
@@ -306,6 +306,23 @@ export class MenuController {
   unregister(menu: Menu) {
     removeArrayItem(this._menus, menu);
   }
+
+  /**
+   * @private
+   */
+  _setActiveMenu(menu: Menu) {
+    assert(menu.enabled);
+    assert(this._menus.indexOf(menu) >= 0, 'menu is not registered');
+
+    // if this menu should be enabled
+    // then find all the other menus on this same side
+    // and automatically disable other same side menus
+    const side = menu.side;
+    this._menus
+      .filter(m => m.side === side && m !== menu)
+      .map(m => m.enable(false));
+  }
+
 
   /**
    * @private

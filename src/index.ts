@@ -104,6 +104,7 @@ import { ShowWhen, HideWhen } from './components/show-hide-when/show-hide-when';
 import { Slide } from './components/slides/slide';
 import { Slides } from './components/slides/slides';
 import { Spinner } from './components/spinner/spinner';
+import { SplitPanel } from './components/split-panel/split-panel';
 import { Tab } from './components/tabs/tab';
 import { Tabs } from './components/tabs/tabs';
 import { TabButton } from './components/tabs/tab-button';
@@ -187,6 +188,7 @@ export { ShowWhen, HideWhen, DisplayWhen } from './components/show-hide-when/sho
 export { Slide } from './components/slides/slide';
 export { Slides } from './components/slides/slides';
 export { Spinner } from './components/spinner/spinner';
+export { SplitPanel } from './components/split-panel/split-panel';
 export { Tab } from './components/tabs/tab';
 export { TabButton } from './components/tabs/tab-button';
 export { TabHighlight } from './components/tabs/tab-highlight';
@@ -215,6 +217,7 @@ export { NavController } from './navigation/nav-controller';
 export { NavControllerBase } from './navigation/nav-controller-base';
 export { NavParams } from './navigation/nav-params';
 export { NavLink, NavOptions, DeepLink, DeepLinkConfig, DeepLinkMetadata, DeepLinkMetadataType } from './navigation/nav-util';
+export { RootNode } from './navigation/root-node';
 export { UrlSerializer, DeepLinkConfigToken } from './navigation/url-serializer';
 export { ViewController } from './navigation/view-controller';
 export { ActionSheetCmp } from './components/action-sheet/action-sheet-component';
@@ -368,6 +371,7 @@ export { Transition } from './transitions/transition';
     Slide,
     Slides,
     Spinner,
+    SplitPanel,
     Tab,
     Tabs,
     TabButton,
@@ -462,6 +466,7 @@ export { Transition } from './transitions/transition';
     Slide,
     Slides,
     Spinner,
+    SplitPanel,
     Tab,
     Tabs,
     TabButton,
